@@ -151,7 +151,8 @@ extension BackupViewController : UIDocumentPickerDelegate {
             
             // 기존 vs 새로운것 알럿 적용
             print("---기존에 똑같은 형식의 파일이 존재합니다.")
-            // 경로 가져오기
+            // 기존에 존재하는 파일 유지하기 ex) 여러가지를 백업시킨다고하면 sandboxFileURL를 직접적으로 넣어주게 되면 sandboxFileURL 배열안에 있기 때문에 true 메서드가 타서 선택한 파일만 불러올 수 있음 ( 난 다른 파일을 복구하고 싶은데... 선택한 파일만 무조건‼️ 가져오게 되어있음 ).
+            // 👉 그래서 기존 파일을 유지하기 위해서는 해당 zip 파일 URL 변수를 만들어준다.
             let fileURL = path.appendingPathComponent("JackArchive.zip")
             print("파일이 존재한다면 도큐먼트 경로에 JackArchive.zip을 추가한 경로를 가져온다. \(fileURL)")
             // 압축 파일을 해제시킨다.
