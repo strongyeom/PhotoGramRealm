@@ -66,7 +66,7 @@ class BackupViewController: BaseViewController {
         }
         print("파일에 경로가 있는지 파악 순서1. : \(path)")
         
-        // 3. 백업하고자 하는 파일 경로  ex) ~~~ / ~~~/ ~ /Document/default.realm
+        // 3. 백업하고자 하는 파일 경로(것)  ex) ~~~ / ~~~/ ~ /Document/default.realm
         let realmFile = path.appendingPathComponent("default.realm")
         print("해당 파일에 default.realm 추가 순서2. : \(realmFile)")
         
