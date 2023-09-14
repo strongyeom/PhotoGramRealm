@@ -13,13 +13,13 @@ class RealmCollectionViewController: BaseViewController {
     
     var collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout())
     
-  //  let realm = try! Realm()
+    let realm = try! Realm()
     
-    var list = ["안녕하세요", "여보세요", "세번쨰입니다."]
+    var list: Results<TodoTable>!
     
     // UICollectionViewListCell : iOS 14.0 이상 가능한 Cell 형식임
     // String : 타입에 대한 형태 , String 배열로 리스트가 구성됨 , ⭐️ 하나의 Cell을 차지하는 Model에 대한 타입 ex) list[indexPath.item] ⭐️
-    var cellRegisteration: UICollectionView.CellRegistration<UICollectionViewListCell, String>!
+    var cellRegisteration: UICollectionView.CellRegistration<UICollectionViewListCell, TodoTable>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +30,7 @@ class RealmCollectionViewController: BaseViewController {
             make.edges.equalToSuperview()
         }
         
-      //  list = realm.objects(TodoTable.self)
+        list = realm.objects(TodoTable.self)
         
         
         // cellRegisteration 초기화
@@ -39,9 +39,9 @@ class RealmCollectionViewController: BaseViewController {
             var content = UIListContentConfiguration.valueCell()
             // Cell 구성
             // itemIdentifier == list[indexPath.item]  / cellFor ~ item: data로 전달해줬기 때문에 클로저로 넘어옴
-            content.text = itemIdentifier
-            content.image = UIImage(systemName: "flame")
-            content.secondaryText = "Test"
+            content.image = itemIdentifier.favorite ? UIImage(systemName: "star.fill") : UIImage(systemName: "star")
+            content.text = itemIdentifier.title
+            content.secondaryText = "\(itemIdentifier.detail.count)개의 세부 할일"
             
             cell.contentConfiguration = content
             
