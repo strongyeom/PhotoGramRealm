@@ -35,6 +35,9 @@
 		263A75AC2AAAA095008294F8 /* TodoTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263A75AB2AAAA095008294F8 /* TodoTable.swift */; };
 		263A75AE2AAAA367008294F8 /* TodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263A75AD2AAAA367008294F8 /* TodoViewController.swift */; };
 		2661462C2AB2CC8600C93E4B /* RealmCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2661462B2AB2CC8600C93E4B /* RealmCollectionViewController.swift */; };
+		2661462E2AB35AC600C93E4B /* DetailTableCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2661462D2AB35AC600C93E4B /* DetailTableCollectionViewController.swift */; };
+		266146302AB35EE000C93E4B /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2661462F2AB35EE000C93E4B /* Observable.swift */; };
+		266146322AB35F5700C93E4B /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266146312AB35F5700C93E4B /* ViewModel.swift */; };
 		26E9394C2AA6CB0900D2A79B /* FileManager+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E9394B2AA6CB0900D2A79B /* FileManager+Ext.swift */; };
 		26E9394E2AA6F25500D2A79B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E9394D2AA6F25500D2A79B /* DetailViewController.swift */; };
 		26F617A12AA954D4002061C4 /* BackupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F617A02AA954D4002061C4 /* BackupViewController.swift */; };
@@ -69,6 +72,9 @@
 		263A75AB2AAAA095008294F8 /* TodoTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTable.swift; sourceTree = "<group>"; };
 		263A75AD2AAAA367008294F8 /* TodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewController.swift; sourceTree = "<group>"; };
 		2661462B2AB2CC8600C93E4B /* RealmCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmCollectionViewController.swift; sourceTree = "<group>"; };
+		2661462D2AB35AC600C93E4B /* DetailTableCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableCollectionViewController.swift; sourceTree = "<group>"; };
+		2661462F2AB35EE000C93E4B /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		266146312AB35F5700C93E4B /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		26E9394B2AA6CB0900D2A79B /* FileManager+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Ext.swift"; sourceTree = "<group>"; };
 		26E9394D2AA6F25500D2A79B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		26F617A02AA954D4002061C4 /* BackupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupViewController.swift; sourceTree = "<group>"; };
@@ -233,6 +239,9 @@
 				263A75AB2AAAA095008294F8 /* TodoTable.swift */,
 				2661462B2AB2CC8600C93E4B /* RealmCollectionViewController.swift */,
 				263A75AD2AAAA367008294F8 /* TodoViewController.swift */,
+				2661462D2AB35AC600C93E4B /* DetailTableCollectionViewController.swift */,
+				266146312AB35F5700C93E4B /* ViewModel.swift */,
+				2661462F2AB35EE000C93E4B /* Observable.swift */,
 			);
 			path = Todo;
 			sourceTree = "<group>";
@@ -329,9 +338,11 @@
 				263A75AE2AAAA367008294F8 /* TodoViewController.swift in Sources */,
 				263A75AC2AAAA095008294F8 /* TodoTable.swift in Sources */,
 				04BAEB312AA550A7005A3A69 /* SearchViewController.swift in Sources */,
+				2661462E2AB35AC600C93E4B /* DetailTableCollectionViewController.swift in Sources */,
 				04BAEB1E2AA4C090005A3A69 /* BaseTableViewCell.swift in Sources */,
 				04BAEB252AA4C0DF005A3A69 /* Constants.swift in Sources */,
 				04BAEAFD2AA4BF3F005A3A69 /* ViewController.swift in Sources */,
+				266146322AB35F5700C93E4B /* ViewModel.swift in Sources */,
 				2661462C2AB2CC8600C93E4B /* RealmCollectionViewController.swift in Sources */,
 				04BAEB202AA4C0A3005A3A69 /* BaseCollectionViewCell.swift in Sources */,
 				04BAEB162AA4BFD0005A3A69 /* PhotoListTableViewCell.swift in Sources */,
@@ -349,6 +360,7 @@
 				2604D92F2AA8002300EFAC82 /* DiaryTableRepository.swift in Sources */,
 				26E9394C2AA6CB0900D2A79B /* FileManager+Ext.swift in Sources */,
 				04BAEB132AA4BF8C005A3A69 /* HomeViewController.swift in Sources */,
+				266146302AB35EE000C93E4B /* Observable.swift in Sources */,
 				04BAEB2E2AA4CA1D005A3A69 /* WriteTextField.swift in Sources */,
 				04BAEB2C2AA4C261005A3A69 /* AddViewController.swift in Sources */,
 				04BAEB1C2AA4C07B005A3A69 /* ResuableProtocol.swift in Sources */,
