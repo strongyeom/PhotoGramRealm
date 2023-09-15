@@ -16,18 +16,23 @@ class DetailTableViewModel {
     
     lazy var detailReamls = Observable(realm.objects(DetailTable.self))
     
-   
+    lazy var listData = Observable<[DetailTable]>([])
+//        .init(
+//        realm.objects(DetailTable.self).map { $0 }
+//    )
+
     
     func addDetailValue() {
         let aa = DetailTable(detail: "123", deadLine: Date())
-
-        
         try! realm.write {
             realm.add(aa)
+            listData.value.append(aa)
         }
     }
     
-    func configure() -> Results<DetailTable> {
-        realm.objects(DetailTable.self)
+    func configure() {
+        listData.value = realm.objects(DetailTable.self).map { $0 }
     }
+    
+    
 }

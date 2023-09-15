@@ -47,25 +47,20 @@ class DiaryCollectionViewController : BaseViewController {
             content.secondaryText = "\(itemIdentifier._id)"
             cell.contentConfiguration = content
         })
+
+        detailTableViewModel.configure()
         
-        
-          list = detailTableViewModel.configure()
-    
-        detailTableViewModel.detailRealm.bind { aaa in
-            // reaml에 데이터를 추가할때마다 지켜보고 있다가 DetailTable이 didSet이 되면
-            // reload 시켜주고 싶은데... 어떻게 구현해야 하지?
-            DispatchQueue.main.async {
-                self.collectionView.reloadData()
-            }
-           
+        detailTableViewModel.listData.bind { _ in
+            self.collectionView.reloadData()
         }
         
         
     }
     
     @objc func plusBtnClicked() {
+//        list = detailTableViewModel.configure()
         detailTableViewModel.addDetailValue()
-       // self.collectionView.reloadData()
+//        self.collectionView.reloadData()
     }
     
     
@@ -85,11 +80,12 @@ class DiaryCollectionViewController : BaseViewController {
 extension DiaryCollectionViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return list.count
+//        return list.count
+        detailTableViewModel.listData.value.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let data = list[indexPath.item]
+        let data = detailTableViewModel.listData.value[indexPath.item]
         let cell = collectionView.dequeueConfiguredReusableCell(using: cellResisteration, for: indexPath, item: data)
         return cell
     }
